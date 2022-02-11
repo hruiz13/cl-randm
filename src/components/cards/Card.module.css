@@ -1,0 +1,62 @@
+.cardContainer {
+    display: flex;
+    width: calc(50% - 10px);
+}
+
+.char_img {
+    width: 180px;
+    border-radius: 10px;
+}
+
+.char_name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.char_details {
+    margin-left: 10px;
+    background-color: #f2f2f2;
+    font-size: 25px;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+
+.status {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    padding: 7px 0;
+}
+
+.char_statusIndicator {
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-radius: 999px;
+    margin-right: 10px;
+}
+
+.char_statusGreen {
+    background-color: green;
+}
+
+.char_statusRed {
+    background-color: red;
+}
+
+.char_statusYellow {
+    background-color: yellow;
+}
+
+.moreInfo {
+    align-self: flex-end;
+}

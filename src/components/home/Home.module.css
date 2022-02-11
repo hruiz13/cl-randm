@@ -1,0 +1,21 @@
+.mainContainer {
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    max-width: 1440px;
+    padding: 0 20px;
+    display: flex;
+}
+
+
+.leftContainer {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.rightContainer {
+    width: 30%;
+}

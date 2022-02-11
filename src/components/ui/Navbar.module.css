@@ -1,0 +1,15 @@
+.container {
+    background-color: #191e38;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    max-width: 1440px;
+}
+
+.image {
+    height: 90px;
+    margin-bottom: 17px;
+}
