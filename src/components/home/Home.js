@@ -11,13 +11,11 @@ export const Home = () => {
     const dispatch = useDispatch();
     const { characters, actualPage, pagesViewed, search } = useSelector(state => state.ch)
 
-    console.log("characters", characters)
-
     useEffect(() => {
         if (!pagesViewed.includes(actualPage)) {
             dispatch(loadCharacters(actualPage, search))
         }
-    }, [actualPage])
+    }, [actualPage, dispatch])
 
     return (
         <div className={Styles.mainContainer}>

@@ -5,8 +5,9 @@
 .imageContainer {
     display: flex;
     justify-content: flex-end;
-    margin-right: 20px;
+    padding-right: 20px;
     max-width: 1440px;
+    margin: auto;
 }
 
 .image {

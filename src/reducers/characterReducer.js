@@ -19,7 +19,6 @@ export const characterReducer = (state = initialState, action) => {
             return {
                 ...state,
                 characters: { 1: action.payload.results },
-                pagesViewed: [...state.pagesViewed, action.payload.page],
                 actualPage: 1,
                 search: action.payload.busqueda,
                 pagesViewed: []
@@ -27,7 +26,6 @@ export const characterReducer = (state = initialState, action) => {
         case types.saveMoreCharacters:
             return {
                 ...state,
-                // characters: [...state.characters.slice(0, action.payload.page - 1), action.payload.results, ...state.characters.slice(action.payload.page - 1)],
                 characters: { ...state.characters, [action.payload.page]: action.payload.results },
                 pagesViewed: [...state.pagesViewed, action.payload.page]
             }

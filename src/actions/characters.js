@@ -13,22 +13,16 @@ export const loadCharacters = (page = 1, busqueda = '') => {
             }
             const body = await resp.json();
 
-            console.log("body:", body)
             if (body.error === "There is nothing here") {
                 dispatch(modalStatus(true))
-
                 dispatch(modalError("No se ha encontrado ningun resultado."))
                 return
             }
-
             if (page === 1) {
                 dispatch(saveCharacters({ ...body, page, busqueda }))
             } else {
                 dispatch(saveMoreCharacters({ ...body, page, busqueda }))
             }
-
-
-
             if (page === 1) dispatch(saveData(body))
             if (page === 1) dispatch(selectCharacter(body.results[0]))
         } catch (error) {

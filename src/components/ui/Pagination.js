@@ -8,8 +8,7 @@ export const Pagination = () => {
     const [lastPages, setLastPages] = useState([])
     const [centerPages, setCenterPages] = useState([])
 
-    const { pages, actualPage, count } = useSelector(store => store.ch)
-    console.log("Pages", pages, actualPage)
+    const { pages, actualPage } = useSelector(store => store.ch)
     const dispatch = useDispatch()
 
     useEffect(() => {

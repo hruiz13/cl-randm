@@ -21,14 +21,12 @@ export const Card = ({ character }) => {
           {character.name}
         </div>
         <div className={Styles.status}>
-          {character.status === "Alive" &&
-            <span className={`${Styles.char_statusIndicator} ${Styles.char_statusGreen}`}></span>
-          }{
-            character.status === "Dead" &&
-            <span className={`${Styles.char_statusIndicator} ${Styles.char_statusRed}`}></span>
-          }{
-            character.status === "unknown" &&
-            <span className={`${Styles.char_statusIndicator} ${Styles.char_statusYellow}`}></span>
+          {
+            <span className={`${Styles.char_statusIndicator} 
+            ${character.status === "Alive" && Styles.char_statusGreen}
+            ${character.status === "Dead" && Styles.char_statusRed}
+            ${character.status === "unknown" && Styles.char_statusYellow}
+            `}></span>
           }
           <span>{character.status}</span>
         </div>
