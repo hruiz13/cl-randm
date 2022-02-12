@@ -4,3 +4,29 @@
     max-width: 1440px;
     padding: 0 20px;
 }
+
+.pagNumbersContainer {
+    display: flex;
+    background-color: #191e38;
+    color: #eeff41;
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+.numbers {
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+.active {
+    color: #2196f3;
+}
+
+.pag {
+    font-size: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}

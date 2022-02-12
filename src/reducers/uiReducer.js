@@ -2,13 +2,14 @@ import { types } from "../types/types";
 
 
 const initialState = {
-    error: false,
-    loading: true
+    error: '',
+    loading: true,
+    modal: false
 }
 
 export const uiReducer = (state = initialState, action) => {
     switch (action.type) {
-        case types.error:
+        case types.modalError:
             return {
                 ...state,
                 error: action.payload
@@ -17,6 +18,11 @@ export const uiReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: action.payload
+            }
+        case types.modalState:
+            return {
+                ...state,
+                modal: action.payload
             }
         default:
             return state;

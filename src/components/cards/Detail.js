@@ -5,7 +5,6 @@ import Styles from './Detail.module.css'
 export const Detail = () => {
 
     const { selected } = useSelector(store => store.ch)
-    console.log("Selected ", selected)
     const { name, image, gender, origin, location, episode } = selected;
     if (selected === 0) return <></>
 

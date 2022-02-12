@@ -9,18 +9,21 @@ import Styles from './Home.module.css'
 export const Home = () => {
 
     const dispatch = useDispatch();
-    const { characters } = useSelector(state => state.ch)
+    const { characters, actualPage, pagesViewed, search } = useSelector(state => state.ch)
+
+    console.log("characters", characters)
 
     useEffect(() => {
-        // dispatch(loadCharacters())
-    }, [])
+        if (!pagesViewed.includes(actualPage)) {
+            dispatch(loadCharacters(actualPage, search))
+        }
+    }, [actualPage])
 
     return (
         <div className={Styles.mainContainer}>
-
             <div className={Styles.leftContainer}>
                 {
-                    characters.map(character => {
+                    characters[actualPage]?.map(character => {
                         return (
                             <Card key={character.id} character={character} />
                         )

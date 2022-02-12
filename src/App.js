@@ -7,12 +7,14 @@ import { store } from './store/store';
 import { Navbar } from './components/ui/Navbar';
 import { SearchBar } from './components/ui/SearchBar';
 import { SerieNumbers } from './components/home/SerieNumbers';
+import { ModalError } from './components/ui/ModalError';
 
 function App() {
   return (
     <Provider store={store}>
 
       <Router>
+        <ModalError />
         <Navbar />
         <SearchBar />
         <SerieNumbers />

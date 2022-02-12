@@ -19,3 +19,22 @@
 .rightContainer {
     width: 30%;
 }
+
+@media screen and (max-width: 1024px) {
+
+    .mainContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .leftContainer {
+        width: 100%;
+    }
+
+    .rightContainer {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+}

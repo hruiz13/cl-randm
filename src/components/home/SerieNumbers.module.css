@@ -1,12 +1,14 @@
 .container {
     max-width: 1440px;
-    margin: auto 20px;
-    background-color: #f4f4f4;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
 .options {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    background-color: #f4f4f4;
 }
 
 .options div {
