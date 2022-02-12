@@ -7,5 +7,8 @@ export const types = {
     selectPage: '[SELECT] Select page',
     saveSearch: '[SAVING] Save search',
     modalState: '[MODAL] State of modal',
-    modalError: '[MODAL] Error message of modal'
+    modalError: '[MODAL] Error message of modal',
+    saveEpisodes: '[SAVING] Saving number of episodes',
+    saveLocations: '[SAVING] Saving number of locations',
+    saveNumberCharacters: '[SAVING] Saving number of characters'
 }

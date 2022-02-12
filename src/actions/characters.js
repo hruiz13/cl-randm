@@ -20,6 +20,7 @@ export const loadCharacters = (page = 1, busqueda = '') => {
             }
             if (page === 1) {
                 dispatch(saveCharacters({ ...body, page, busqueda }))
+                if (!busqueda) dispatch(numberOfCharacters(body.info.count))
             } else {
                 dispatch(saveMoreCharacters({ ...body, page, busqueda }))
             }
@@ -36,13 +37,13 @@ export const loadCharacters = (page = 1, busqueda = '') => {
 }
 
 //Character general list
-const saveCharacters = (data) => ({
+const saveCharacters = (payload) => ({
     type: types.saveCharacters,
-    payload: data
+    payload
 })
-const saveMoreCharacters = (data) => ({
+const saveMoreCharacters = (payload) => ({
     type: types.saveMoreCharacters,
-    payload: data
+    payload
 })
 
 const saveData = (data) => ({
@@ -50,12 +51,17 @@ const saveData = (data) => ({
     payload: data.info
 })
 
-export const selectCharacter = (data) => ({
+export const selectCharacter = (payload) => ({
     type: types.selectCharacter,
-    payload: data
+    payload
 })
 
-export const selectPage = (data) => ({
+export const selectPage = (payload) => ({
     type: types.selectPage,
-    payload: data
+    payload
+})
+
+export const numberOfCharacters = (payload) => ({
+    type: types.saveNumberCharacters,
+    payload
 })
